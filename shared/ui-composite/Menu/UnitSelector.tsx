@@ -403,14 +403,16 @@ const UnitSelector = () => {
             </div>
 
             {showSubunitSelector && (
-              <div className='px-2 pb-1'>
+              <>
                 <div className='-mx-2 my-3 h-0.5 bg-(--border-color)' />
-                <SubunitSelector
-                  subunits={activeSubunits}
-                  selectedSubunitId={resolvedSelectedSubunitId}
-                  onSelect={handleSubunitSelect}
-                />
-              </div>
+                <div className='px-2 pb-1'>
+                  <SubunitSelector
+                    subunits={activeSubunits}
+                    selectedSubunitId={resolvedSelectedSubunitId}
+                    onSelect={handleSubunitSelect}
+                  />
+                </div>
+              </>
             )}
           </div>
         </motion.div>
